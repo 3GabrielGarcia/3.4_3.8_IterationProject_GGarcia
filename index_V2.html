@@ -14,20 +14,42 @@
         <meta name="Author" content="Gabriel Zeaph Garcia"/>
         <meta name="Description" content="This website is made to showcase the products created by the NZ based company IDIDIKIT"/>
         <meta name="Viewport" content="Width=Device-width, initial-scale=1"/>
-        <link rel="stylesheet" href="css/style.css">  
+        <link rel="stylesheet" href="css/style_V2.css">  
     </head>
 
 <Body>
     <div class="grid-container">
 	<div class="nav" id="thetop">
-		<div><a href="index_V1.html"><img src="images\ididikitLogoHorizontal.png" alt="Ididikit Logo" id="idklogo"></a></div>
-		<div>    
-			<ul>
-				<li><div class="activepage"><a href="index_V1.html">Home</a></div></li>
-				<li><a href="index_V1.html">Product Gallery</a></li>
-				<li><a href="index_V1.html">Request A Design</a></li>
-			</ul>	
-		</div>   
+		<div id="navbar">
+			<div><a href="index_V2.html"><img src="images\ididikitLogoHorizontal.png" alt="Ididikit Logo" id="idklogo"></a></div>
+			<div>    
+				<ul>
+					<li><div class="activepage"><a href="index_V1.html">Home</a></div></li>
+					<li><a href="index_V2.html">Product Gallery</a></li>
+					<li><a href="index_V2.html">Request A Design</a></li>
+				</ul>	
+			</div> 
+		</div>
+		<!-- Burger menu only active for responsive design -->
+		<div id="burgermenu"> 
+			<nav role="navigation">	
+				<div id="menuToggle">
+					<input type="checkbox" />
+					<span></span>
+					<span></span>
+					<span></span>
+						<ul id="menu">
+							<div id="navflex">
+							<a href="index.html"><li>Home</li></a> 
+							<a href="index.html"><li>Activities</li></a> 
+							<a href="index.html"><li>Contact Us</li></a> 
+							<a href="index.html"><li>Wainuiomata Camp</li></a>
+							</div>
+						</ul>		
+				</div><!--menutoggle div end -->
+			</nav>
+		</div><!--burger menu div end -->
+		
 	</div> <!--nav div end -->
 		<div class="header">
 			<img src="images\404NotCreated.jpg" alt="Image of an IDIDIKIT Product" id="headerimage">
@@ -35,44 +57,45 @@
 				<h1 id="headertext">Welcome To the<br> IDIDIKIT Store</h1>
 			</div>
 		</div> <!-- header div end -->
+		<script type="text/javascript" src="js/myscript.js"></script>	
         <div class="content">
 		
 		<hr>
 			<div id="quotetext">
 			<h1>“The name Ididikit comes from the <br> Filipino word didikit, which means “to stick” <br>It is also a playful nod <br>to “ID kit” and personalized products”</h1>
 			</div>
-		<hr>
 			<div class="textimgcontainer">
 				<div class="imagecontainerhomeLeft">
 				<img src="images\404NotCreated.jpg" alt="Image of an IDIDIKIT Product" id="Productimage">
 				</div>
-				<div class="textcontainercenter">
+				<div class="textcontainer">
 					<h1>What Do We Do?</h1>
-					<p id="centertext">Ididikit is a design company that offers customers the opportunity to commission custom designs, ranging from Vinyl Designs, Heat Prints, and Laser Engraving. Ididikit designs are able to be put on many different products such as T-shirts, Cutting Boards, Mugs, Bottles, tote bags, and much more.</p>
+					<p>Ididikit is a design company that offers customers the opportunity to commission custom designs, ranging from Vinyl Designs, Heat Prints, and Laser Engraving. Ididikit designs are able to be put on many different products such as T-shirts, Cutting Boards, Mugs, Bottles, tote bags, and much more.</p>
+					<div class="buttoncontainer"><button class="IDIDButton"><p>View Our Products</p></button></div>
 				</div>
+				
 			</div>
-			<hr>
+		<hr>
+		
 		<div class="textimgcontainer">
 			<div class="textcontainer">
-				<h1>About The Company</h1>
-				<p>Ididikit was born during the pandemic from a simple hobby that quickly turned into something more. After being gifted a Cricut machine, I saw an opportunity to combine my design background with my love for creating personalised gifts and products.</p>
-
-				<div class="buttoncontainer"><button class="IDIDButton"><p>View Our Products</p></button></div>
+				<h1>Our Products</h1>
+				<p>What started as making personalized items for friends soon grew into a full-fledged small business. Over time, the shop expanded into laser engraved items, taking on more intricate and meaningful products that bring personal touches to everyday items and special occasions.</p>
+				<div class="buttoncontainer"><button class="IDIDButton"><p>Request A Design</p></button></div>
 			</div>
 			<div class="imagecontainerhome">
 				<img src="images\404NotCreated.jpg" alt="Image of an IDIDIKIT Product" id="Productimage">
 			</div>
 		</div>
 		<hr>
-		
+
 		<div class="textimgcontainer">
 			<div class="imagecontainerhomeLeft">
 				<img src="images\404NotCreated.jpg" alt="Image of an IDIDIKIT Product" id="Productimage">
 			</div>
-			<div class="textcontainer">
-				<h1>Our Products</h1>
-				<p>What started as making personalized items for friends soon grew into a full-fledged small business. Over time, I expanded my craft into laser engraving, taking on more intricate and meaningful products that bring personal touches to everyday items and special occasions.</p>
-				<div class="buttoncontainer"><button class="IDIDButton"><p>Request A Design</p></button></div>
+			<div class="textcontainercenter">
+				<h1>Our Company History</h1>
+				<p id="centertext">Ididikit was born during the pandemic from a simple hobby that quickly turned into something more. After being gifted a Cricut machine, I saw an opportunity to combine my design background with my love for creating personalised gifts and products.</p>
 			</div>
 		</div>
 		<hr>
