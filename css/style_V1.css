@@ -1,0 +1,777 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz@0,14..32;1,14..32&display=swap');
+
+/* variable fonts */
+:root{
+	--idpurple: #A36DCD;
+	--idgrey: #515151;
+	--idwhite: #FBFBF2;
+	--idpurpleopacity07: rgba(163, 109, 205, 0.7);
+	--idpurpleopacity06: rgba(163, 109, 205, 0.6);
+}
+
+/* controls grid sizes */
+.grid-container { 
+	display: grid;
+	grid-template-columns: auto;
+	grid-template-rows: 100px 89vh auto 125px;
+	height: 200px;
+	
+}
+
+body {
+	margin: 0;
+	background-color: var(--idwhite);
+	background-image: url(../images/Textureplaceholder.png);
+	overflow-x: hidden
+}
+
+.header {
+    box-sizing: border-box;
+	background-color: var(--idpurple);
+	grid-column-start: 1;
+	grid-column-end: span 2;
+	background-image: url(../images/404NotCreated.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+.nav { 
+	box-sizing: border-box;
+	background-color: var(--idpurpleopacity06);
+	grid-column-start: 1;
+	grid-column-end: span 2;
+	z-index: 99;
+	border-bottom: 5px solid var(--idpurple);
+	align-items: center;
+	color: var(--idwhite);
+	display: flex;
+}
+
+#navbar {
+	display: flex;
+	width: 100%;
+	align-items: center;
+}
+
+.content {
+	margin: 20px;
+	grid-column-end: span 2;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+.footer {
+	background-color: var(--idpurpleopacity06);
+	grid-column-end: span 2;
+	padding-left: 10px;
+	text-align: center;
+	padding-top: 15px;
+	padding: 1%;
+	z-index: 4;
+	color: var(--idwhite);
+}
+
+ul {
+	display: block;
+	list-style: none;
+	padding: 0px;
+	color: var(--idwhite);
+	
+}
+
+ul li {
+	font-size: 25px;
+	font-family: "Sigmar", serif;
+	font-weight: 100;
+	font-style: normal;
+	display: inline-block;
+	margin-right: -4px;
+	position: relative;
+	padding: 22.5px 20px 21.5px; 
+}
+
+a {
+	text-decoration: none;
+	color: var(--idwhite);
+	font-family: "Inter", sans-serif;
+  	font-optical-sizing: auto;
+	font-weight: 400;
+  	font-style: normal;
+}
+
+p {
+	font-size: 22px;
+	margin-top: 0;
+	font-family: "Inter", sans-serif;
+ 	font-optical-sizing: auto;
+  	font-weight: 400;
+  	font-style: normal;
+}
+
+h1 {
+	font-size: 32px;
+	font-family: "Inter", sans-serif;
+  	font-optical-sizing: auto;
+  	font-weight: 800;
+  	font-style: normal;
+
+
+}
+
+#idimagefooter {
+	height: 90px;
+	width: auto;
+}
+
+a:hover{
+	color:var(--idpurple);
+}
+
+.activepage {
+	text-decoration: underline;
+}
+.activepage:hover{
+	color:var(--idpurple);
+}
+
+#idklogo {
+	height: 60px;
+    width: auto;
+    padding-top: 5px;
+	padding-left: 20px;
+	padding-right: 15px;
+}
+
+.footertext {
+ 	font-size: 18px;
+	margin: 10px;
+
+}
+
+.footertextheader {
+	font-size: 24px;
+	margin: 10px;
+}
+
+.footerlink {
+	font-size: 24px;
+	margin: 10px;
+	text-decoration: underline;
+}
+
+#headertextbox {
+    width: 45%;
+    background-color: var(--idpurpleopacity06);
+    z-index: 99;
+    position: relative;
+    margin-left: 27.5%;
+    margin-right: 27.5%;
+	margin-top: 15%;
+	border: 5px solid var(--idpurple);
+	border-radius: 10px;
+}
+
+#headertext {
+	color: #fafafa;
+	font-size: 54px;
+	text-align: center;
+}
+.infoheader {
+
+	color: var(--idpurple);
+}
+
+.imagecontainerhome {
+	height: 400px;
+	width: 400px;
+	overflow: hidden;
+	margin-right: 10%;
+	border-radius: 10px;
+	border: 5px solid var(--idpurple);
+	display: flex;
+    justify-content: center;
+}
+
+.imagecontainerhomeLeft {
+	height: 400px;
+	width: 400px;
+	overflow: hidden;
+	margin-left: 10%;
+	border-radius: 10px;
+	border: 5px solid var(--idpurple);
+	display: flex;
+    justify-content: center;	
+}
+
+#productimage{
+	height: 100%;
+}
+
+.textimgcontainer {
+	display: flex;
+	justify-content: center;
+	padding: 20px;
+	justify-content: space-between;
+}
+
+.textcontainer {
+	width: 500px;
+	height: auto;
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+.textcontainercenter {
+	margin-top: 6%;
+	width: 500px;
+	height: auto;
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+#logo {
+	display: none;
+}
+
+.idbutton {
+	width: 300px;
+	height: 80px;
+	border: 5px solid var(--idpurple);
+	background-color: var(--idpurpleopacity06);
+	margin-top: 5%;
+	border-radius: 10px;
+	text-decoration: underline;
+	transition: 0.2s;
+	color: var(--idwhite);
+}
+
+
+
+/* Image Carousel css*/
+* {box-sizing: border-box}
+
+img {vertical-align: center;}
+
+/* Slideshow container */
+.slideshow-container {
+	width: 50vw;
+	position: relative;
+	border-radius: 10px;
+	margin-left: 60px;
+	margin-top: 10px;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	width: auto;
+	padding: 1.5vw;
+	margin-top: -22px;
+	color: white;
+	font-weight: bold;
+	font-size: 1.5vw;
+	transition: 0.6s ease;
+	border-radius: 0 3px 3px 0;
+	border: 5px solid var(--idpurple);
+	user-select: none;
+	background-color: var(--idpurpleopacity06);
+}
+
+/* Position the "next button" to the right */
+.next {
+ 	right: 0;
+	border-radius: 0 500px 500px 0;
+	right: -65px;
+	top: 145px;
+	
+}
+
+.prev {
+ 	left: -65px;
+	border-radius: 500px 0 0 500px;
+	top: 145px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  	background-color: var(--tcblue);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  	color: #f2f2f2;
+  	font-size: 12px;
+  	padding: 8px 12px;
+  	position: absolute;
+  	top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  	cursor: pointer;
+  	height: 15px;
+  	width: 15px;
+ 	margin: 0 2px;
+  	border-radius: 50%;
+  	display: inline-block;
+  	transition: background-color 0.6s ease;
+	border-style: solid;
+}
+
+#dots {
+	padding-top: 20px;
+}
+
+.active, .dot:hover {
+  	background-color: black;
+}
+
+/* Fading animation */
+.fade {
+  	animation-name: fade;
+  	animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  	from {opacity: .4} 
+  	to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+/* Image Carousel css end*/
+
+a #navtext:hover {
+	color:var(--idwhite);
+}
+
+.carouselimg {
+	display: flex;
+	justify-content: center;
+	overflow: hidden;
+	
+}
+
+.carouselimgcontainer {
+	width: 345px;
+	height: 300px;
+	border: 5px solid var(--idpurple);
+	border-radius: 10px;
+}
+
+#box1 {
+	margin-right:10px;
+}
+
+#box2 {
+	margin-left:10px;
+}
+
+.carouseltextcontainer {
+	justify-content: center;
+	display: flex;
+}
+
+.carouseltext {
+	width: 300px;
+	margin-left: 30px;
+	margin-right: 40px;
+}
+
+
+#carouselflex {
+	display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+
+#quotetext {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	padding-bottom: 20px;
+}
+
+.idbutton p{
+	margin: 0;
+}
+
+
+.idbutton:hover {
+	background-color: var(--idpurple);
+}
+
+.buttoncontainer {
+	display: flex;
+	justify-content: center;
+}
+	
+hr {
+    border: 1px solid var(--idpurple);
+	margin-top: 2%;
+	margin-bottom: 2%;
+}
+
+#burgermenu {
+	display: none;
+}
+
+
+.footerlinkflex {
+	align-items: center;
+	display: flex;
+  	flex-direction: row;
+	justify-content: flex-end;
+}
+
+
+.footericon {
+	height: auto;
+	width: 2vw;
+	padding-right: 1%;
+}
+
+#footertextflex {
+	display:flex;
+  	flex-direction: column;
+	text-align: center;
+}
+
+.footerelementbox {
+	display: flex;
+  	flex-direction: row;
+	justify-content: space-between;
+}
+
+
+
+
+
+@media only screen and (max-width: 700px) {
+
+/* 
+Burgermenu code */
+	#menuToggle {
+		display: block;
+		margin-top: 5px;
+		z-index: 1;
+		-webkit-user-select: none;
+		user-select: none;
+	}
+
+
+	#menuToggle input {
+		display: block;
+		width: 30px;
+		height: 20px;
+		position: absolute;
+		top: 20px;
+		left: -5px;
+		
+		cursor: pointer;
+		
+		opacity: 0;
+		z-index: 2;
+		
+		-webkit-touch-callout: none;
+		
+	}
+		
+
+	#menuToggle span {
+		display: block;
+		width: 27px;
+		height: 4.5px;
+		margin-bottom: 4px;
+		position: relative;
+		background: white;
+		border-radius: 3px;
+		z-index: 1;
+		transform-origin: 4px 0px;
+	}
+
+	#menu {
+		width: 100vw;
+		height: 125px;
+		margin: 12px 0px 0px -10px;
+		padding-bottom: 10px;
+		background: var(--idpurpleopacity06);
+		list-style-type: none;
+		-webkit-font-smoothing: antialiased;
+
+		transform-origin: 0% 0%;
+		transform: translate(-100%, 0);
+		transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+		border-bottom: 5px solid var(--idpurple);
+	}	
+		
+	#menuToggle input:checked~ul {
+		transform: none;
+	}
+
+	/* hamburger menu css end */
+
+	#navflex {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		flex-wrap: wrap;
+	}
+		
+	#burgermenu {
+		width: 80%;
+		position: absolute;
+		display: block;
+        margin-top: 136px;
+        margin-left: 10px;
+	}
+
+	li {
+		padding-top: 5px;
+		font-size: 16px;
+		padding-left: 5px;
+	}
+	ul {
+		padding-bottom: 20px;
+	}
+
+	#headertextbox {
+        margin-top: 260px;
+		width: 80%;
+		z-index: 99;
+		position: relative;
+		margin-left: 10%;
+		margin-right: 10%;
+		border: 5px solid var(--idpurple);
+		border-radius: 10px;
+    }
+	
+	#headertext {
+		font-size: 20px;
+	}
+
+	p {
+        font-size: 12px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+    }
+
+	.imagecontainerhomeLeft {
+		display: none;
+	}
+
+	.imagecontainerhome {
+		display: none;
+	}
+
+	.textcontainer {	
+    	height: auto;
+	}
+
+	h1 {
+        font-size: 15px;
+    }
+
+	.textimgcontainer {
+    justify-content: center;
+    padding: 0px;
+	}
+
+	.grid-container {
+		display: grid;
+		grid-template-columns: auto;
+		grid-template-rows: 50px 400px auto auto;
+		height: 200px;
+		
+	}
+
+	.contentboundry {
+		max-width: 100vw;
+        display: flex;
+        flex-direction: column;
+	}
+
+	#idimagefooter {
+    	height: 70px;
+    	width: auto;
+	}
+
+	.content {
+    	margin: 0px;
+    	grid-column-end: span 2;
+	}
+
+	.idbutton {
+		width: 150px;
+		height: 50px;
+		border: 5px solid var(--idpurple);
+		background-color: var(--idpurpleopacity06);
+		margin-top: 5%;
+		margin-bottom: 10px ;
+	}
+
+	.footertextheader {
+    	font-size: 15px;
+    	margin: 10px;
+	}
+	.footertext {
+    	font-size: 12px;
+    	margin: 1%;
+	}
+
+	.footerlink {
+    	font-size: 15px;
+    	margin: 10px;
+    	text-decoration: underline;
+	}
+
+	.nav {
+		border-bottom: none;
+	}
+
+	#navbar {
+		display: none;
+	}
+
+	ul li {
+		padding-top: 2.6px;
+		font-size: 18px;
+		padding-left: 5px;
+		display: block;
+		position: relative;
+		padding-bottom: inherit;
+		margin: 0;
+	}
+
+    #idlogo {
+        height: 36px;
+        width: auto;
+        padding-top: 5px;
+    }
+
+	#logo {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+	display: block;
+	}
+
+	.footerelementbox {
+  	flex-direction: column;
+	}
+
+	.footerlinkflex {
+  	flex-direction: column;
+	}
+
+	.contact_container {
+		border-radius: 10px;
+		margin: 5%;
+	}
+
+
+
+}
+
+
+
+
+
+
+/* Php form code*/
+
+
+
+
+
+
+
+input[type=text], select, textarea {
+	width:100%;
+	padding: 12px;
+	resize: vertical;
+	border: 2px solid var(--idpurple);
+	border-radius: 10px;
+}
+
+#message {
+	margin-bottom: 20px;
+}
+
+label {
+	padding: 12px 12px 12px 0;
+	display: inline-block;
+
+}
+
+input[type=submit] {
+	width: 300px;
+	height: 80px;
+	border: 2px solid var(--idpurple);
+	background-color: var(--idpurpleopacity06);
+	border-radius: 10px;
+	text-decoration: underline;
+	transition: 0.2s;
+	color: var(--idwhite);
+	padding: 12px 20px;
+	cursor: pointer;
+	float: right;
+	margin: 10px;
+	font-size: 22px;
+	margin-top: 0;
+	font-family: "Inter", sans-serif;
+ 	font-optical-sizing: auto;
+  	font-weight: 400;
+  	font-style: normal;
+}
+
+input[type=submit]:hover {
+	background-color: var(--idpurple);
+}
+
+.contact_container {
+	border: 2px solid var(--idpurple);
+	border-radius: 10px;
+	padding: 20px;
+	margin-left: 10%;
+	margin-right: 10%;
+	font-family: "Inter", sans-serif;
+  	font-optical-sizing: auto;
+	font-weight: 400;
+  	font-style: normal;
+}
+
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+#submitbutton {
+	display: flex;
+	justify-content: space-around;
+}
+
+.column2 {
+	width: 100%;
+}
+	
+.column {
+	float: none;
+	width: 100%;
+}
+	
+
+/* NO CLUE WHAT THIS DOES */
+
