@@ -1,3 +1,9 @@
+// when button is clicked it scrolls to the top
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+
 //carousel 1
 
 let slideIndex = 1;
@@ -56,6 +62,7 @@ function showSlides2(n) {
   slides[slideIndex-1].style.display = "block";  
 }
 
+// setInterval(() => { plusSlides2(1) }, 4000);
 
 // carousel 3
 
@@ -82,3 +89,5 @@ function showSlides3(n) {
   }
   slides[slideIndex-1].style.display = "block";  
 }
+
+// setInterval(() => { plusSlides3(1) }, 4000);
