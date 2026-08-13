@@ -7,6 +7,8 @@
 	--idwhite: #FBFBF2;
 	--idpurpleopacity07: rgba(163, 109, 205, 0.7);
 	--idpurpleopacity06: rgba(163, 109, 205, 0.6);
+
+	--idborder: 3.5px solid var(--idpurple);
 }
 
 /* controls grid sizes */
@@ -42,7 +44,7 @@ body {
 	grid-column-start: 1;
 	grid-column-end: span 2;
 	z-index: 99;
-	border-bottom: 5px solid var(--idpurple);
+	border-bottom: 3.5px solid var(--idpurple);
 	align-items: center;
 	color: var(--idwhite);
 	display: flex;
@@ -55,7 +57,6 @@ body {
 }
 
 .content {
-	margin: 20px;
 	grid-column-end: span 2;
 }
 
@@ -111,6 +112,10 @@ p {
   	font-style: normal;
 }
 
+#quotetext {
+	margin:10px;
+}
+
 h1 {
 	font-size: 32px;
 	font-family: "Inter", sans-serif;
@@ -153,7 +158,7 @@ a:hover{
 
 .footertextheader {
 	font-size: 24px;
-	margin: 10px;
+	margin: 10px 10px 7px;
 }
 
 .footerlink {
@@ -170,7 +175,7 @@ a:hover{
     margin-left: 27.5%;
     margin-right: 27.5%;
 	margin-top: 15%;
-	border: 5px solid var(--idpurple);
+	border: var(--idborder);
 	border-radius: 10px;
 }
 
@@ -190,7 +195,7 @@ a:hover{
 	overflow: hidden;
 	margin-right: 10%;
 	border-radius: 10px;
-	border: 5px solid var(--idpurple);
+	border: var(--idborder);
 	display: flex;
     justify-content: center;
 }
@@ -201,7 +206,7 @@ a:hover{
 	overflow: hidden;
 	margin-left: 10%;
 	border-radius: 10px;
-	border: 5px solid var(--idpurple);
+	border: var(--idborder);
 	display: flex;
     justify-content: center;	
 }
@@ -213,8 +218,7 @@ a:hover{
 .textimgcontainer {
 	display: flex;
 	justify-content: center;
-	padding: 20px;
-	justify-content: space-between;
+
 }
 
 .textcontainer {
@@ -239,16 +243,17 @@ a:hover{
 .idbutton {
 	width: 300px;
 	height: 80px;
-	border: 5px solid var(--idpurple);
+	border: var(--idborder);
 	background-color: var(--idpurpleopacity06);
 	margin-top: 5%;
 	border-radius: 10px;
 	text-decoration: underline;
 	transition: 0.2s;
 	color: var(--idwhite);
+	margin-bottom: 20px;
 }
 
-
+/* back to top button css end */
 
 /* Image Carousel css*/
 * {box-sizing: border-box}
@@ -268,7 +273,7 @@ img {vertical-align: center;}
 .prev, .next {
 	cursor: pointer;
 	position: absolute;
-	top: 50%;
+	top: 45%;
 	width: auto;
 	padding: 1.5vw;
 	margin-top: -22px;
@@ -277,7 +282,7 @@ img {vertical-align: center;}
 	font-size: 1.5vw;
 	transition: 0.6s ease;
 	border-radius: 0 3px 3px 0;
-	border: 5px solid var(--idpurple);
+	border: var(--idborder);
 	user-select: none;
 	background-color: var(--idpurpleopacity06);
 }
@@ -286,15 +291,15 @@ img {vertical-align: center;}
 .next {
  	right: 0;
 	border-radius: 0 500px 500px 0;
-	right: -65px;
-	top: 145px;
+	right: -5vw;
+	/* top: 145px; */
 	
 }
 
 .prev {
- 	left: -65px;
+ 	left: -5vw;
 	border-radius: 500px 0 0 500px;
-	top: 145px;
+	/* top: 145px; */
 }
 
 /* On hover, add a black background color with a little bit see-through */
@@ -363,7 +368,7 @@ a #navtext:hover {
 .carouselimgcontainer {
 	width: 345px;
 	height: 300px;
-	border: 5px solid var(--idpurple);
+	border: var(--idborder);
 	border-radius: 10px;
 }
 
@@ -455,16 +460,150 @@ hr {
 }
 
 
+.footerelementboxresponsive {
+	display: none;
+}
+
+
+/* Php form code*/
+input[type=text], select, textarea {
+	width:100%;
+	padding: 12px;
+	resize: vertical;
+	border: var(--idborder);
+	border-radius: 10px;
+}
+
+#message {
+	margin-bottom: 20px;
+}
+
+label {
+	padding: 12px 12px 12px 0;
+	display: inline-block;
+
+}
+
+input[type=submit] {
+	width: 300px;
+	height: 80px;
+	border: var(--idborder);
+	background-color: var(--idpurpleopacity06);
+	border-radius: 10px;
+	text-decoration: underline;
+	transition: 0.2s;
+	color: var(--idwhite);
+	padding: 12px 20px;
+	cursor: pointer;
+	float: right;
+	margin: 10px;
+	font-size: 22px;
+	margin-top: 0;
+	font-family: "Inter", sans-serif;
+ 	font-optical-sizing: auto;
+  	font-weight: 400;
+  	font-style: normal;
+}
+
+input[type=submit]:hover {
+	background-color: var(--idpurple);
+}
+
+.contactcontainer {
+	border: var(--idborder);
+	border-radius: 10px;
+	padding: 20px;
+	margin-left: 10%;
+	margin-right: 10%;
+	margin-bottom: 20px;
+	font-family: "Inter", sans-serif;
+  	font-optical-sizing: auto;
+	font-weight: 400;
+  	font-style: normal;
+	margin-top: 20px;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+#submitbutton {
+	display: flex;
+	justify-content: space-around;
+}
+
+.column2 {
+	width: 100%;
+}
+	
+.column {
+	float: none;
+	width: 100%;
+}
+	
+
+/* NO CLUE WHAT THIS DOES */
 
 
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 1000px) {
+	#box2 {
+		display: none;
+	}
+
+	.slideshow-container {
+    width: 40vw;
+    position: relative;
+    border-radius: 10px;
+    margin-left: 0px;
+    margin-top: 10px;
+	}
+
+	.carouseltext {
+		margin-left: 0px;
+	}
+
+	#box1 {
+    	margin-right: 10px;
+    	margin-left: 10px;
+	}
+
+	
+
+}
+
+@media only screen and (max-width: 900px) {
+	.prev, .next {
+        padding: 12px;
+        font-size: 22px;
+    }
+
+	.next {
+        right: -50px;
+    }
+
+	.prev {
+        left: -50px;
+    }
+
+	
+}
+
+
+
+
+@media only screen and (max-width: 800px) {
 
 /* 
 Burgermenu code */
 	#menuToggle {
 		display: block;
-		margin-top: 5px;
+		margin-top: 15px;
 		z-index: 1;
 		-webkit-user-select: none;
 		user-select: none;
@@ -503,7 +642,7 @@ Burgermenu code */
 
 	#menu {
 		width: 100vw;
-		height: 125px;
+		height: 135px;
 		margin: 12px 0px 0px -10px;
 		padding-bottom: 10px;
 		background: var(--idpurpleopacity06);
@@ -553,7 +692,7 @@ Burgermenu code */
 		position: relative;
 		margin-left: 10%;
 		margin-right: 10%;
-		border: 5px solid var(--idpurple);
+		border: var(--idborder);
 		border-radius: 10px;
     }
 	
@@ -562,7 +701,7 @@ Burgermenu code */
 	}
 
 	p {
-        font-size: 12px;
+        font-size: 16px;
         padding-top: 3px;
         padding-bottom: 3px;
     }
@@ -580,7 +719,8 @@ Burgermenu code */
 	}
 
 	h1 {
-        font-size: 15px;
+        font-size: 18px;
+		justify-self: center;
     }
 
 	.textimgcontainer {
@@ -610,12 +750,13 @@ Burgermenu code */
 	.content {
     	margin: 0px;
     	grid-column-end: span 2;
+		
 	}
 
 	.idbutton {
-		width: 150px;
-		height: 50px;
-		border: 5px solid var(--idpurple);
+        width: 200px;
+        height: 60px;
+		border: var(--idborder);
 		background-color: var(--idpurpleopacity06);
 		margin-top: 5%;
 		margin-bottom: 10px ;
@@ -677,101 +818,95 @@ Burgermenu code */
 
 	.contact_container {
 		border-radius: 10px;
-		margin: 5%;
+		margin-left: 5%;
+		margin-right: 5%;
+		margin-bottom: 10px;
 	}
 
+	.footerelementboxresponsive {
+		display: flex;
+		justify-content: space-around;
+	}
 
+	.footerelementbox {
+		display: none;
+	}
 
-}
+	#footerimgresponsive {
+		flex-direction: row;
+		display: flex;
+		margin-top: 10px;
+		align-items: center;
+	}
 
+	.footerflexresponsive {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		padding: 10px;
+	}
 
+	.footertexttop{
+		margin-bottom: -10px;
+	}
 
-
-
-
-/* Php form code*/
-
-
-
-
-
-
-
-input[type=text], select, textarea {
-	width:100%;
-	padding: 12px;
-	resize: vertical;
-	border: 2px solid var(--idpurple);
-	border-radius: 10px;
-}
-
-#message {
-	margin-bottom: 20px;
-}
-
-label {
-	padding: 12px 12px 12px 0;
-	display: inline-block;
-
-}
-
-input[type=submit] {
-	width: 300px;
-	height: 80px;
-	border: 2px solid var(--idpurple);
-	background-color: var(--idpurpleopacity06);
-	border-radius: 10px;
-	text-decoration: underline;
-	transition: 0.2s;
-	color: var(--idwhite);
-	padding: 12px 20px;
-	cursor: pointer;
-	float: right;
-	margin: 10px;
-	font-size: 22px;
-	margin-top: 0;
-	font-family: "Inter", sans-serif;
- 	font-optical-sizing: auto;
-  	font-weight: 400;
-  	font-style: normal;
-}
-
-input[type=submit]:hover {
-	background-color: var(--idpurple);
-}
-
-.contact_container {
-	border: 2px solid var(--idpurple);
-	border-radius: 10px;
-	padding: 20px;
-	margin-left: 10%;
-	margin-right: 10%;
-	font-family: "Inter", sans-serif;
-  	font-optical-sizing: auto;
-	font-weight: 400;
-  	font-style: normal;
-}
-
-.row:after {
-	content: "";
-	display: table;
-	clear: both;
-}
-
-#submitbutton {
-	display: flex;
-	justify-content: space-around;
-}
-
-.column2 {
+	#submitbutton {
 	width: 100%;
-}
-	
-.column {
-	float: none;
-	width: 100%;
-}
-	
+    height: auto;
+	justify-self: center;
+	}
 
-/* NO CLUE WHAT THIS DOES */
+	.carouseltextcontainer {
+    	flex-direction: column;
+		justify-self: center;
+	}
+	
+	.carouseltext {
+		width: auto;
+		margin-left: 30px;
+	}
+
+	.carouselimgcontainer {
+		width: 100%;
+		height: 200px;
+	}
+
+	.slideshow-container {
+		width: 60vw;
+		margin-left: 0px;
+		justify-self: center;
+	}
+
+	#message {
+		padding: 6px;
+		height: 100px;
+	}
+	#formbutton {
+		margin-left: 30px;
+    	margin-right: 15px;
+	}
+}
+
+
+@media only screen and (max-width: 400px) {
+	.prev, .next {
+		padding: 5vw;
+		font-size: 5vw;
+	}
+
+	.next {
+
+		right: -15vw;
+	}
+
+	.prev {
+		left: -15vw;
+	}
+}
+
+
+
+
+
+
 
