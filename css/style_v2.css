@@ -45,6 +45,12 @@ body {
 	display: flex;
 }
 
+#navbar {
+	display: flex;
+	width: 100%;
+	align-items: center;
+}
+
 .content {
 	margin: 20px;
 	grid-column-end: span 2;
@@ -121,7 +127,7 @@ a:hover{color:#b5b5b5}
 	height: 60px;
     width: auto;
     padding-top: 5px;
-	padding-left: 10px;
+	padding-left: 20px;
 	padding-right: 15px;
 }
 
@@ -139,7 +145,6 @@ a:hover{color:#b5b5b5}
 
 
 #headertextbox {
-
     width: 45%;
     background-color: rgba(12, 233, 189, 0.4);
     z-index: 99;
@@ -155,7 +160,6 @@ a:hover{color:#b5b5b5}
 	color: palevioletred;
 	font-size: 52px;
 	text-align: center;
-
 }
 
 .imagecontainerhome {
@@ -196,7 +200,7 @@ a:hover{color:#b5b5b5}
 }
 
 .textcontainercenter {
-	margin-top: 4%;
+	margin-top: 6%;
 	width: 500px;
 	height: auto;
 	margin-left: 10%;
@@ -207,14 +211,17 @@ a:hover{color:#b5b5b5}
 	width: 300px;
 	height: 80px;
 	border: 5px solid black;
-	background-color: rgba(255, 57, 57, 0.8);
+	background-color: rgba(255, 57, 57, 0.7);
 	margin-top: 5%;
 	border-radius: 10px;
+	text-decoration: underline;
+	transition: 0.2s;
 }
 
 #quotetext {
 	display: flex;
 	justify-content: center;
+	text-align: center;
 }
 
 .IDIDButton p{
@@ -223,7 +230,7 @@ a:hover{color:#b5b5b5}
 
 
 .IDIDButton:hover {
-	background-color: rgba(255, 57, 57, 1);
+	background-color: rgb(255, 23, 23);
 }
 
 .buttoncontainer {
@@ -232,12 +239,114 @@ a:hover{color:#b5b5b5}
 }
 
 
+/* burger menu code */
+
+/* hamburger menu css */
+#menuToggle {
+	display: block;
+	position: relative;
+	top: 20px;
+	left: 20px;
+	margin-right: 20px;
+	z-index: 1;
+	-webkit-user-select: none;
+	user-select: none;
+}
+
+
+
+#menuToggle input {
+	display: block;
+	width: 40px;
+	height: 32px;
+	position: absolute;
+	top: -7px;
+	left: -5px;
+	
+	cursor: pointer;
+	
+	opacity: 0;
+	z-index: 2;
+	
+	-webkit-touch-callout: none;
+	
+}
+	
+
+#menuToggle span {
+	display: block;
+	width: 40px;
+	height: 6px;
+	margin-bottom: 6px;
+	position: relative;
+	background: #232323;
+	border-radius: 3px;
+	z-index: 1;
+	transform-origin: 4px 0px;
+}
+
+#menu {
+
+	width: auto;
+	height: auto;
+	margin: 20px 0 0 -50px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+
+	
+	background: #ededed;
+	list-style-type: none;
+	-webkit-font-smoothing: antialiased;
+	
+	transform-origin: 0% 0%;
+	transform: translate(-100%, 0);
+	
+	transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}	
+	
+#menuToggle input:checked~ul {
+	transform:none;
+}
+
+#burgermenu {
+	width: 100%;
+    height: 100%;
+	position: absolute;
+	display: none;
+}
+
+#navflex {
+  	display: flex;
+  	flex-direction: row;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+	
+hr {
+    border: 1px solid #eee;
+	margin-top: 2%;
+	margin-bottom: 2%;
+}
+	
+/* hamburger menu css end */
 
 
 
 
 
+/* @media only screen and (max-width: 700px) {
+	ul {
+		list-style: none;
+		padding: 0px;
+	}
+	#burgermenu {
+		display: block;
+	}
+	#navbar {
+		display: none;
+	}
 
+} */
 
 
 /* NO CLUE WHAT THIS DOES */
@@ -248,9 +357,6 @@ a:hover{color:#b5b5b5}
 
 
 
-hr {
-    border: 1px solid #eee;
-}
 
 nav a:visited{
     color: rgb(255, 0, 64)#f60;
