@@ -1,8 +1,3 @@
-// when button is clicked it scrolls to the top
-function topFunction() {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-}
 
 //carousel 1
 
