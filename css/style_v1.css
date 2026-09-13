@@ -5,15 +5,17 @@
 	--idpurple: #A36DCD;
 	--idgrey: #515151;
 	--idwhite: #FBFBF2;
-	--idpurpleopacity07: rgba(163, 109, 205, 0.7);
-	--idpurpleopacity06: rgba(163, 109, 205, 0.6);
+	--idpurpleopacity07: rgba(163, 109, 205, 0.6);
+	--idpurpleopacity06: rgba(163, 109, 205, 0.5);
+
+	--idborder: 3.5px solid var(--idpurple);
 }
 
 /* controls grid sizes */
 .grid-container { 
 	display: grid;
 	grid-template-columns: auto;
-	grid-template-rows: 100px 89vh auto 125px;
+	grid-template-rows: 100px auto auto 125px;
 	height: 200px;
 	
 }
@@ -21,7 +23,7 @@
 body {
 	margin: 0;
 	background-color: var(--idwhite);
-	background-image: url(../images/Textureplaceholder.png);
+	background-image: url(../images/background.png);
 	overflow-x: hidden
 }
 
@@ -30,10 +32,41 @@ body {
 	background-color: var(--idpurple);
 	grid-column-start: 1;
 	grid-column-end: span 2;
-	background-image: url(../images/404NotCreated.jpg);
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
+}
+
+
+
+#indexheader {
+	background-image: url(../images/notebookpen.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	height: 100vh;
+	width: 100%;
+	margin-top: -100px;
+}
+
+#pg2header {
+	background-image: url(../images/notebooks.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	height: 100vh;
+	width: 100%;
+	margin-top: -100px;
+}
+
+#contactheader {
+	background-image: url(../images/floraltote.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	height: 100vh;
+	width: 100%;
+	margin-top: -100px;
 }
 
 .nav { 
@@ -42,7 +75,7 @@ body {
 	grid-column-start: 1;
 	grid-column-end: span 2;
 	z-index: 99;
-	border-bottom: 5px solid var(--idpurple);
+	border-bottom: 3.5px solid var(--idpurple);
 	align-items: center;
 	color: var(--idwhite);
 	display: flex;
@@ -55,7 +88,6 @@ body {
 }
 
 .content {
-	margin: 20px;
 	grid-column-end: span 2;
 }
 
@@ -74,6 +106,12 @@ html {
 	color: var(--idwhite);
 }
 
+#linkicon {
+	height: 30px;
+    width: auto;
+    padding-top: 10px;
+}
+
 ul {
 	display: block;
 	list-style: none;
@@ -84,7 +122,7 @@ ul {
 
 ul li {
 	font-size: 25px;
-	font-family: "Sigmar", serif;
+	font-family: "Inter", sans-serif;
 	font-weight: 100;
 	font-style: normal;
 	display: inline-block;
@@ -109,6 +147,10 @@ p {
  	font-optical-sizing: auto;
   	font-weight: 400;
   	font-style: normal;
+}
+
+#quotetext {
+	margin:10px;
 }
 
 h1 {
@@ -153,7 +195,7 @@ a:hover{
 
 .footertextheader {
 	font-size: 24px;
-	margin: 10px;
+	margin: 10px 10px 7px;
 }
 
 .footerlink {
@@ -163,14 +205,13 @@ a:hover{
 }
 
 #headertextbox {
-    width: 45%;
+    width: 50%;
     background-color: var(--idpurpleopacity06);
     z-index: 99;
-    position: relative;
-    margin-left: 27.5%;
-    margin-right: 27.5%;
-	margin-top: 15%;
-	border: 5px solid var(--idpurple);
+    position: absolute;
+	justify-self: center;
+	margin-top: 40vh;
+	border: var(--idborder);
 	border-radius: 10px;
 }
 
@@ -180,17 +221,16 @@ a:hover{
 	text-align: center;
 }
 .infoheader {
-
 	color: var(--idpurple);
 }
 
 .imagecontainerhome {
 	height: 400px;
-	width: 400px;
+	width: auto;
 	overflow: hidden;
 	margin-right: 10%;
 	border-radius: 10px;
-	border: 5px solid var(--idpurple);
+	border: var(--idborder);
 	display: flex;
     justify-content: center;
 }
@@ -201,7 +241,7 @@ a:hover{
 	overflow: hidden;
 	margin-left: 10%;
 	border-radius: 10px;
-	border: 5px solid var(--idpurple);
+	border: var(--idborder);
 	display: flex;
     justify-content: center;	
 }
@@ -213,8 +253,7 @@ a:hover{
 .textimgcontainer {
 	display: flex;
 	justify-content: center;
-	padding: 20px;
-	justify-content: space-between;
+
 }
 
 .textcontainer {
@@ -225,7 +264,6 @@ a:hover{
 }
 
 .textcontainercenter {
-	margin-top: 6%;
 	width: 500px;
 	height: auto;
 	margin-left: 10%;
@@ -239,16 +277,17 @@ a:hover{
 .idbutton {
 	width: 300px;
 	height: 80px;
-	border: 5px solid var(--idpurple);
+	border: var(--idborder);
 	background-color: var(--idpurpleopacity06);
 	margin-top: 5%;
 	border-radius: 10px;
 	text-decoration: underline;
 	transition: 0.2s;
 	color: var(--idwhite);
+	margin-bottom: 20px;
 }
 
-
+/* back to top button css end */
 
 /* Image Carousel css*/
 * {box-sizing: border-box}
@@ -268,7 +307,7 @@ img {vertical-align: center;}
 .prev, .next {
 	cursor: pointer;
 	position: absolute;
-	top: 50%;
+	top: 45%;
 	width: auto;
 	padding: 1.5vw;
 	margin-top: -22px;
@@ -277,7 +316,7 @@ img {vertical-align: center;}
 	font-size: 1.5vw;
 	transition: 0.6s ease;
 	border-radius: 0 3px 3px 0;
-	border: 5px solid var(--idpurple);
+	border: var(--idborder);
 	user-select: none;
 	background-color: var(--idpurpleopacity06);
 }
@@ -286,15 +325,15 @@ img {vertical-align: center;}
 .next {
  	right: 0;
 	border-radius: 0 500px 500px 0;
-	right: -65px;
-	top: 145px;
+	right: -5vw;
+	/* top: 145px; */
 	
 }
 
 .prev {
- 	left: -65px;
+ 	left: -5vw;
 	border-radius: 500px 0 0 500px;
-	top: 145px;
+	/* top: 145px; */
 }
 
 /* On hover, add a black background color with a little bit see-through */
@@ -363,8 +402,19 @@ a #navtext:hover {
 .carouselimgcontainer {
 	width: 345px;
 	height: 300px;
-	border: 5px solid var(--idpurple);
+	border: var(--idborder);
 	border-radius: 10px;
+	overflow: hidden;
+	display: flex;
+    justify-content: center;
+	align-items: center;
+
+}
+
+.carouselimage{
+	width: fit-content;
+    height: fit-content;
+    max-width: 400px;
 }
 
 #box1 {
@@ -455,16 +505,322 @@ hr {
 }
 
 
+.footerelementboxresponsive {
+	display: none;
+}
+
+
+/* Php form code*/
+input[type=text], select, textarea {
+	width:100%;
+	padding: 12px;
+	resize: vertical;
+	border: var(--idborder);
+	border-radius: 10px;
+}
+
+#message {
+	margin-bottom: 20px;
+}
+
+label {
+	padding: 12px 12px 12px 0;
+	display: inline-block;
+
+}
+
+input[type=submit] {
+	width: 300px;
+	height: 80px;
+	border: var(--idborder);
+	background-color: var(--idpurpleopacity06);
+	border-radius: 10px;
+	text-decoration: underline;
+	transition: 0.2s;
+	color: var(--idwhite);
+	padding: 12px 20px;
+	cursor: pointer;
+	float: right;
+	margin: 10px;
+	font-size: 22px;
+	margin-top: 0;
+	font-family: "Inter", sans-serif;
+ 	font-optical-sizing: auto;
+  	font-weight: 400;
+  	font-style: normal;
+}
+
+input[type=submit]:hover {
+	background-color: var(--idpurple);
+}
+
+.contactcontainer {
+	border: var(--idborder);
+	border-radius: 10px;
+	padding: 20px;
+	margin-left: 10%;
+	margin-right: 10%;
+	margin-bottom: 20px;
+	font-family: "Inter", sans-serif;
+  	font-optical-sizing: auto;
+	font-weight: 400;
+  	font-style: normal;
+	margin-top: 20px;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+#submitbutton {
+	display: flex;
+	justify-content: space-around;
+}
+
+.column2 {
+	width: 100%;
+}
+	
+.column {
+	float: none;
+	width: 100%;
+}
+
+@media only screen and (min-width: 2350px)  {
+	.next {
+        right: 7vw;
+    }
+
+	.prev {
+        left: 7vw;
+	}
+	
+}
+
+@media only screen and (min-width: 1950px) and (max-width: 2350px) {
+	.next {
+        right: 4vw;
+    }
+
+	.prev {
+        left: 4vw;
+	}
+	
+}
+
+
+@media only screen and (min-width: 1850px) and (max-width: 1950px)  {
+	.next {
+        right: 20px;
+    }
+
+	.prev {
+        left: 20px;
+    }
+	
+}
+
+@media only screen and (min-width: 1750px) and (max-width: 1850px)  {
+	.next {
+        right: 0px;
+    }
+
+	.prev {
+        left: 0px;
+    }
+}
+
+
+@media only screen and (min-width: 1750px)  {
+
+    .carouseltext {
+        width: 20vw;
+        margin-left: 30px;
+        margin-right: 40px;
+    }
+
+	h1 {
+	font-size: 2.1vw;
+	}
+	p {
+	font-size: 1.3vw;
+	}
+
+	.idbutton {
+    width: 14vw;
+    height: 4vw;
+	margin-top: 20%;
+	margin-bottom: 20%;
+	}
+
+	.imagecontainerhomeLeft {
+    height: 20vw;
+    width: 20vw;
+	}
+
+	.imagecontainerhome {
+    height: 20vw;
+    width: auto;
+	}
+
+	.textcontainer {
+	margin-left: 5%;
+    margin-right: 5%;
+	}
+	
+	.textcontainercenter {
+    width: 500px;
+    height: auto;
+    margin-left: 5%;
+    margin-right: 5%;
+	}
+	.prev, .next {
+    padding: 1vw;
+	}
+
+	#linkicon {
+		height: 2vw;
+	}
+
+	ul li {
+    	font-size: 2vw;
+		padding: 22.5px 2vw 21.5px
+	}
+
+	#idklogo {
+    	height: 4vw;
+	}
+
+	#headertext {
+    font-size: 4vw;
+	}
+	.grid-container {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 6vw  auto auto 8vw;
+    height: 200px;
+	}
+
+	#indexheader {
+    margin-top: -6vw;
+	}
+
+	.footertextheader {
+    font-size: 2vw;
+	}
+
+	.footertext {
+		font-size: 1.1vw;
+	}
+
+	.footerlink {
+    font-size: 2vw;
+	}
+
+	#idimagefooter {
+    height: 90px;
+	}
+
+	#idimagefooter {
+    height: 6vw;
+	}
+
+	#pg2header {
+    margin-top: -6vw;
+	}
+
+	#contactheader {
+    margin-top: -6vw;
+	}
+
+	input[type=text], select, textarea {
+    font-size: 1.5vw;
+	}
+
+	label {
+
+    font-size: 1.2vw;
+	}
+
+}
+
+@media only screen and (min-width: 1600px) and (max-width: 1750px) {
+		.next {
+        right: -30px;
+    }
+
+	.prev {
+        left: -30px;
+    }
+
+
+}
+
+@media only screen and (max-width: 1000px) {
+	#box2 {
+		display: none;
+	}
+
+	.slideshow-container {
+    width: 40vw;
+    position: relative;
+    border-radius: 10px;
+    margin-left: 0px;
+    margin-top: 10px;
+	}
+
+	.carouseltext {
+		margin-left: 0px;
+	}
+
+	#box1 {
+    	margin-right: 10px;
+    	margin-left: 10px;
+		height: 300px;
+	}
+
+	.carouselimage {
+		width: fit-content;
+		height: fit-content;
+		max-width: 450px;
+	}
+
+	
+
+}
+
+@media only screen and (max-width: 900px) {
+	.prev, .next {
+        padding: 12px;
+        font-size: 22px;
+    }
+
+	.next {
+        right: -50px;
+    }
+
+	.prev {
+        left: -50px;
+    }
+
+	
+}
 
 
 
-@media only screen and (max-width: 700px) {
+
+@media only screen and (max-width: 800px) {
 
 /* 
 Burgermenu code */
 	#menuToggle {
 		display: block;
-		margin-top: 5px;
+		margin-top: 15px;
 		z-index: 1;
 		-webkit-user-select: none;
 		user-select: none;
@@ -503,7 +859,7 @@ Burgermenu code */
 
 	#menu {
 		width: 100vw;
-		height: 125px;
+		height: 135px;
 		margin: 12px 0px 0px -10px;
 		padding-bottom: 10px;
 		background: var(--idpurpleopacity06);
@@ -547,13 +903,13 @@ Burgermenu code */
 	}
 
 	#headertextbox {
-        margin-top: 260px;
+        margin-top: 360px;
 		width: 80%;
 		z-index: 99;
-		position: relative;
+		position: absolute;
 		margin-left: 10%;
 		margin-right: 10%;
-		border: 5px solid var(--idpurple);
+		border: var(--idborder);
 		border-radius: 10px;
     }
 	
@@ -562,7 +918,7 @@ Burgermenu code */
 	}
 
 	p {
-        font-size: 12px;
+        font-size: 16px;
         padding-top: 3px;
         padding-bottom: 3px;
     }
@@ -580,18 +936,34 @@ Burgermenu code */
 	}
 
 	h1 {
-        font-size: 15px;
+        font-size: 18px;
+		justify-self: center;
     }
 
+	#box1 {
+        height: 200px;
+    }
 	.textimgcontainer {
     justify-content: center;
     padding: 0px;
 	}
 
+	#indexheader {
+		max-height: 500px;
+	}
+	#pg2header {
+    	max-height: 500px;
+	}
+
+	#contactheader {
+		max-height: 500px;
+	}
+
+
 	.grid-container {
 		display: grid;
 		grid-template-columns: auto;
-		grid-template-rows: 50px 400px auto auto;
+		grid-template-rows: 50px auto auto auto;
 		height: 200px;
 		
 	}
@@ -610,15 +982,16 @@ Burgermenu code */
 	.content {
     	margin: 0px;
     	grid-column-end: span 2;
+		
 	}
 
 	.idbutton {
-		width: 150px;
-		height: 50px;
-		border: 5px solid var(--idpurple);
+        width: 200px;
+        height: 60px;
+		border: var(--idborder);
 		background-color: var(--idpurpleopacity06);
 		margin-top: 5%;
-		margin-bottom: 10px ;
+		margin-bottom: 10%;
 	}
 
 	.footertextheader {
@@ -663,7 +1036,6 @@ Burgermenu code */
 	#logo {
     text-align: center;
     width: 100%;
-    height: 100%;
 	display: block;
 	}
 
@@ -672,106 +1044,100 @@ Burgermenu code */
 	}
 
 	.footerlinkflex {
-  	flex-direction: column;
+  	margin-right: 10px ;
 	}
 
 	.contact_container {
 		border-radius: 10px;
-		margin: 5%;
+		margin-left: 5%;
+		margin-right: 5%;
+		margin-bottom: 10px;
 	}
 
+	.footerelementboxresponsive {
+		display: flex;
+		justify-content: space-around;
+	}
 
+	.footerelementbox {
+		display: none;
+	}
 
-}
+	#footerimgresponsive {
+		flex-direction: row;
+		display: flex;
+		margin-top: 10px;
+		align-items: center;
+	}
 
+	.footerflexresponsive {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		padding: 10px;
+	}
 
+	.footertexttop{
+		margin-bottom: -10px;
+	}
 
-
-
-
-/* Php form code*/
-
-
-
-
-
-
-
-input[type=text], select, textarea {
-	width:100%;
-	padding: 12px;
-	resize: vertical;
-	border: 2px solid var(--idpurple);
-	border-radius: 10px;
-}
-
-#message {
-	margin-bottom: 20px;
-}
-
-label {
-	padding: 12px 12px 12px 0;
-	display: inline-block;
-
-}
-
-input[type=submit] {
-	width: 300px;
-	height: 80px;
-	border: 2px solid var(--idpurple);
-	background-color: var(--idpurpleopacity06);
-	border-radius: 10px;
-	text-decoration: underline;
-	transition: 0.2s;
-	color: var(--idwhite);
-	padding: 12px 20px;
-	cursor: pointer;
-	float: right;
-	margin: 10px;
-	font-size: 22px;
-	margin-top: 0;
-	font-family: "Inter", sans-serif;
- 	font-optical-sizing: auto;
-  	font-weight: 400;
-  	font-style: normal;
-}
-
-input[type=submit]:hover {
-	background-color: var(--idpurple);
-}
-
-.contact_container {
-	border: 2px solid var(--idpurple);
-	border-radius: 10px;
-	padding: 20px;
-	margin-left: 10%;
-	margin-right: 10%;
-	font-family: "Inter", sans-serif;
-  	font-optical-sizing: auto;
-	font-weight: 400;
-  	font-style: normal;
-}
-
-.row:after {
-	content: "";
-	display: table;
-	clear: both;
-}
-
-#submitbutton {
-	display: flex;
-	justify-content: space-around;
-}
-
-.column2 {
+	#submitbutton {
 	width: 100%;
-}
-	
-.column {
-	float: none;
-	width: 100%;
-}
-	
+    height: auto;
+	justify-self: center;
+	}
 
-/* NO CLUE WHAT THIS DOES */
+	.carouseltextcontainer {
+    	flex-direction: column;
+		justify-self: center;
+	}
+	
+	.carouseltext {
+		width: auto;
+		margin-left: 30px;
+	}
+
+	.carouselimgcontainer {
+		width: 100%;
+		height: 200px;
+	}
+
+	.slideshow-container {
+		width: 60vw;
+		margin-left: 0px;
+		justify-self: center;
+	}
+
+	#message {
+		padding: 6px;
+		height: 100px;
+	}
+	#formbutton {
+		margin-left: 30px;
+    	margin-right: 15px;
+	}
+}
+
+
+@media only screen and (max-width: 400px) {
+	.prev, .next {
+		padding: 5vw;
+		font-size: 5vw;
+	}
+
+	.next {
+
+		right: -15vw;
+	}
+
+	.prev {
+		left: -15vw;
+	}
+}
+
+
+
+
+
+
 
