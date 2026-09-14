@@ -563,6 +563,7 @@ input[type=text], select, textarea {
 
 #message {
 	margin-bottom: 20px;
+	height: 100px;
 }
 
 label {
